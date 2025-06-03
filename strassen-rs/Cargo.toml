@@ -1,0 +1,15 @@
+[package]
+name = "strassen_optimizer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rayon = "1.7"
+rand = "0.8"
+num_cpus = "1.15"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
